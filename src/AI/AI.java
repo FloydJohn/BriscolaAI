@@ -3,9 +3,8 @@ package AI;
 import game.Card;
 import game.Deck;
 
-public class CustomAI implements AInterface {
+public class AI {
 
-    @Override
     public Card play(Deck plDeck, Deck pcDeck, Deck gaDeck, Card playerCard, Card.Suit briscolaSuit) {
         float[] prob = new float[pcDeck.size()];
 
@@ -49,10 +48,5 @@ public class CustomAI implements AInterface {
         }
         //System.out.println("AI -> "+ Arrays.toString(prob));
         return best;
-    }
-
-    @Override
-    public String name() {
-        return "CUSTOM";
     }
 }

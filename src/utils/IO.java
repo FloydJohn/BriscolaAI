@@ -1,10 +1,10 @@
-package game;
+package utils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class IOUtils {
+public class IO {
     public static int askNumber(String prompt) {
         BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
         while(true){

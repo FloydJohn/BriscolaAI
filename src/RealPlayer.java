@@ -1,14 +1,15 @@
-import AI.CustomAI;
+import AI.AI;
 import game.Card;
 import game.Deck;
-import game.IOUtils;
 import game.Rules;
+import utils.IO;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class RealPlayer {
 
+    private static final int CARDS_IN_HAND = 3;
     private Deck gameDeck;
     private Deck playerDeck;
     private Deck playerPoints;
@@ -16,13 +17,6 @@ public class RealPlayer {
     private Deck pcPoints;
     private Card.Suit briscolaSuit;
     private boolean lastHandWonByPlayer = true;
-
-    private static final int CARDS_IN_HAND = 3;
-
-    public static void main(String[] args) {
-        RealPlayer rp = new RealPlayer();
-        rp.loop();
-    }
 
     public RealPlayer() {
         gameDeck = new Deck();
@@ -33,6 +27,11 @@ public class RealPlayer {
         gameDeck.generate(System.currentTimeMillis());
         for (int i = 0; i < CARDS_IN_HAND; i++) draw();
         briscolaSuit = gameDeck.getCards().get(0).getSuit();
+    }
+
+    public static void main(String[] args) {
+        RealPlayer rp = new RealPlayer();
+        rp.loop();
     }
 
     public void draw() {
@@ -47,7 +46,7 @@ public class RealPlayer {
     }
 
     public void loop() {
-        CustomAI ai = new CustomAI();
+        AI ai = new AI();
         List<String> briscoleViste = new ArrayList<>();
         while (true) {
             Card playerCard, pcCard = null;
@@ -59,7 +58,7 @@ public class RealPlayer {
             Integer choice;
             while (true) {
                 System.out.println();
-                choice = IOUtils.askNumber("Seleziona la carta da giocare (-1 per uscire): ");
+                choice = IO.askNumber("Seleziona la carta da giocare (-1 per uscire): ");
                 if (choice == -1) return;
                 if (!playerDeck.hasIndex(choice-1)) System.out.println("Numero carta non valido!");
                 else break;
