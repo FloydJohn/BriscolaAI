@@ -1,11 +1,9 @@
-package it.floydjohn.briscola.Players;
+package it.floydjohn.briscola.players;
 
 import it.floydjohn.briscola.model.Card;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * Author: alessandro

@@ -1,4 +1,4 @@
-package it.floydjohn.briscola.Players;
+package it.floydjohn.briscola.players;
 
 import it.floydjohn.briscola.model.Card;
 import it.floydjohn.briscola.model.Deck;

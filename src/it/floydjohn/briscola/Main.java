@@ -1,8 +1,8 @@
 package it.floydjohn.briscola;
 
-import it.floydjohn.briscola.Players.Player;
-import it.floydjohn.briscola.Players.RandomPlayer;
-import it.floydjohn.briscola.Players.RealPlayer;
+import it.floydjohn.briscola.players.Player;
+import it.floydjohn.briscola.players.RandomPlayer;
+import it.floydjohn.briscola.players.RealPlayer;
 import it.floydjohn.briscola.model.Game;
 
 /**

@@ -1,9 +1,6 @@
 package it.floydjohn.briscola.model;
 
-import it.floydjohn.briscola.Players.Player;
-import it.floydjohn.briscola.model.Card;
-import it.floydjohn.briscola.model.Deck;
-import it.floydjohn.briscola.model.Rules;
+import it.floydjohn.briscola.players.Player;
 
 import java.util.ArrayList;
 import java.util.Random;
