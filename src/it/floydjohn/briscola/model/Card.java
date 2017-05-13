@@ -1,4 +1,4 @@
-package game;
+package it.floydjohn.briscola.model;
 
 public class Card {
 

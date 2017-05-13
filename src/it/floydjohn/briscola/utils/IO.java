@@ -1,4 +1,4 @@
-package utils;
+package it.floydjohn.briscola.utils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
